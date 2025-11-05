@@ -46,8 +46,18 @@
   <section id="cart" class="cart">
     <h2>Your Cart</h2>
     <ul id="cartItems"></ul>
-    <button id="checkoutBtn" class="btn">Checkout (PayFast coming soon)</button>
-  </section>
+   <form action="https://sandbox.payfast.co.za/eng/process" method="post">
+  <input type="hidden" name="merchant_id" value="10000100"> <!-- replace with your Merchant ID -->
+  <input type="hidden" name="merchant_key" value="46f0cd694581a"> <!-- replace with your Merchant Key -->
+  <input type="hidden" name="return_url" value="https://your-github-username.github.io/flowcare-website/success.html">
+  <input type="hidden" name="cancel_url" value="https://your-github-username.github.io/flowcare-website/cancel.html">
+  <input type="hidden" name="notify_url" value="https://your-github-username.github.io/flowcare-website/notify.html">
+  
+  <input type="hidden" name="amount" value="35.00">
+  <input type="hidden" name="item_name" value="Comfort Pads">
+  
+  <button type="submit" class="btn">Pay with PayFast</button>
+                                                                     </form> </section>
 
   <section id="chatbot" class="chatbot">
     <h2>Ask FlowBot 🤖</h2>
