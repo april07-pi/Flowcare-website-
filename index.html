@@ -27,14 +27,14 @@
     <h2>Our Products</h2>
     <div class="product-grid">
       <div class="product">
-        <img src="https://via.placeholder.com/150" alt="Pads" />
+        <img src="https://m.media-amazon.com/images/I/71g3ZzUuKXL._AC_SL1500_.jpg" alt="Comfort Pads – Organic Bamboo" width="150" height="150" />
         <h3>Comfort Pads</h3>
         <p>Ultra-soft and leak-proof</p>
         <p class="price">R35 / pack</p>
         <button onclick="addToCart('Comfort Pads',35)">Add to Cart</button>
       </div>
       <div class="product">
-        <img src="https://via.placeholder.com/150" alt="Cup" />
+        <img src="https://m.media-amazon.com/images/I/61XxZyZzZfL._AC_SL1500_.jpg" alt="Reusable Menstrual Cup – Eco-friendly" width="150" height="150" />
         <h3>Reusable Cup</h3>
         <p>Eco-friendly & durable</p>
         <p class="price">R120 each</p>
@@ -46,20 +46,17 @@
   <section id="cart" class="cart">
     <h2>Your Cart</h2>
     <ul id="cartItems"></ul>
-   <form <form action="https://sandbox.payfast.co.za/eng/process" method="post">
-  <input type="hidden" name="merchant_id" value="10043425"> <!-- from screenshot -->
-  <input type="hidden" name="merchant_key" value="9eykrlvsvlhux"> <!-- from screenshot -->
-
-  <input type="hidden" name="return_url" value="https://april07-pi.github.io/flowcare-website/success.html">
-  <input type="hidden" name="cancel_url" value="https://april07-pi.github.io/flowcare-website/cancel.html">
-  <input type="hidden" name="notify_url" value="https://april07-pi.github.io/flowcare-website/notify.html">
-
-  <input type="hidden" name="amount" value="35.00">
-  <input type="hidden" name="item_name" value="Comfort Pads">
-
-  <button type="submit" class="btn">Pay with PayFast</button>
-   </form>
-                                                                     </form> </section>
+    <form action="https://sandbox.payfast.co.za/eng/process" method="post">
+      <input type="hidden" name="merchant_id" value="10043425">
+      <input type="hidden" name="merchant_key" value="9eykrlvsvlhux">
+      <input type="hidden" name="return_url" value="https://april07-pi.github.io/flowcare-website/success.html">
+      <input type="hidden" name="cancel_url" value="https://april07-pi.github.io/flowcare-website/cancel.html">
+      <input type="hidden" name="notify_url" value="https://april07-pi.github.io/flowcare-website/notify.html">
+      <input type="hidden" name="amount" value="35.00">
+      <input type="hidden" name="item_name" value="Comfort Pads">
+      <button type="submit" class="btn">Pay with PayFast</button>
+    </form>
+  </section>
 
   <section id="chatbot" class="chatbot">
     <h2>Ask FlowBot 🤖</h2>
@@ -76,4 +73,4 @@
 
   <script src="script.js"></script>
 </body>
-  </html>
+      </html>
