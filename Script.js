@@ -3,6 +3,7 @@ let cart = [];
 function addToCart(name, price) {
   cart.push({ name, price });
   displayCart();
+  updatePayfastButton();
 }
 
 function displayCart() {
@@ -10,11 +11,23 @@ function displayCart() {
   list.innerHTML = cart.map(item => `<li>${item.name} - R${item.price}</li>`).join('');
 }
 
-document.getElementById('checkoutBtn').onclick = () => {
-  alert('Payment integration (PayFast/Yoco) coming soon!');
-};
+function updatePayfastButton() {
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  const itemNames = cart.map(i => i.name).join(', ');
+  const payButton = document.getElementById('payButton');
+  
+  // Update PayFast form values
+  document.getElementById('item_name').value = itemNames || '';
+  document.getElementById('amount').value = total.toFixed(2);
+  
+  // Enable button only if cart is not empty
+  payButton.disabled = cart.length === 0;
+  payButton.textContent = cart.length > 0 
+    ? `Pay R${total.toFixed(2)} with PayFast` 
+    : 'Pay with PayFast';
+}
 
-// Simple chatbot placeholder
+// Simple chatbot
 function sendMessage() {
   const input = document.getElementById('userInput');
   const text = input.value.trim();
@@ -27,4 +40,4 @@ function sendMessage() {
   messages.innerHTML += `<p><strong>FlowBot:</strong> ${reply}</p>`;
   input.value = "";
   messages.scrollTop = messages.scrollHeight;
-  }
+    }
