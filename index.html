@@ -55,9 +55,29 @@
       <input type="hidden" name="amount" value="35.00">
       <input type="hidden" name="item_name" value="Comfort Pads">
       <button type="submit" class="btn">Pay with PayFast</button>
-    <form id="payfastForm" action="https://sandbox.payfast.co.za/eng/process" method="post">
+    <form id="payfastForm" action="https://www.payfast.co.za/eng/process" method="post">
   <input type="hidden" name="merchant_id" value="10000100">
   <input type="hidden" name="merchant_key" value="46f0cd694581a">
+  <input type="hidden" name="return_url" value="https://april07-pi.github.io/flowcare-website/success.html">
+  <input type="hidden" name="cancel_url" value="https://april07-pi.github.io/flowcare-website/cancel.html">
+  <input type="hidden" name="notify_url" value="https://april07-pi.github.io/flowcare-website/notify.html">
+
+  <input type="hidden" id="item_name" name="item_name" value="">
+  <input type="hidden" id="amount" name="amount" value="">
+
+  <button type="submit" id="payButton" class="btn" disabled>Pay with PayFast</button>
+</form>
+
+<script>
+  function addToCart(productName, price) {
+    document.getElementById('item_name').value = productName;
+    document.getElementById('amount').value = price.toFixed(2);
+    document.getElementById('payButton').disabled = false;
+
+    const cartItems = document.getElementById('cartItems');
+    cartItems.innerHTML = `<li>${productName} – R${price}</li>`;
+  }
+    </script>
   <input type="hidden" name="return_url" value="https://april07-pi.github.io/flowcare-website/success.html">
   <input type="hidden" name="cancel_url" value="https://april07-pi.github.io/flowcare-website/cancel.html">
   <input type="hidden" name="notify_url" value="https://april07-pi.github.io/flowcare-website/notify.html">
