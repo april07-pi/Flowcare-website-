@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Success</title>
+</head>
+<body>
+  <h1>Thank You!</h1>
+  <p>Your payment was successful. We’ll deliver your order soon 💖</p>
+  <a href="index.html">Back to Home</a>
+</body>
+</html>
