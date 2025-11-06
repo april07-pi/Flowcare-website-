@@ -1,7 +1,11 @@
+
 // server.js
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -22,10 +26,13 @@ app.get("/api/products", (req, res) => {
 app.post("/api/payfast", (req, res) => {
   const { amount, item_name, return_url, cancel_url } = req.body;
 
-  const payfastUrl = `https://www.payfast.co.za/eng/process?merchant_id=YOUR_MERCHANT_ID&merchant_key=YOUR_MERCHANT_KEY&amount=${amount}&item_name=${item_name}&return_url=${return_url}&cancel_url=${cancel_url}`;
+  const merchant_id = "10043425";
+  const merchant_key = "9eykrlvsvlhux";
+
+  const payfastUrl = `https://www.payfast.co.za/eng/process?merchant_id=${merchant_id}&merchant_key=${merchant_key}&amount=${amount}&item_name=${encodeURIComponent(item_name)}&return_url=${encodeURIComponent(return_url)}&cancel_url=${encodeURIComponent(cancel_url)}`;
 
   res.json({ redirect: payfastUrl });
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
