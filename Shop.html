@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowCare – Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff0f5;
+      color: #333;
+    }
+    header {
+      background: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    h1 { margin: 0; font-size: 2rem; }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
+    .product {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .product h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+    .product p {
+      font-weight: bold;
+      color: #ff1493;
+    }
+    .product form input[type="submit"] {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+    .product form input[type="submit"]:hover {
+      background: #ff1493;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff69b4;
+      color: white;
+      margin-top: 2rem;
+    }
+    @media(max-width: 600px) {
+      .container { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌸 FlowCare Shop</h1>
+</header>
+
+<div class="container">
+
+  <!-- Product 1 -->
+  <div class="product">
+    <img src="images/pads.jpg" alt="Comfort Pads">
+    <h3>Comfort Pads – Ultra-soft</h3>
+    <p>R35 / pack</p>
+    <form action="https://www.payfast.co.za/eng/process" method="post">
+      <input type="hidden" name="merchant_id" value="10043425">
+      <input type="hidden" name="merchant_key" value="9eykrlvsvlhux">
+      <input type="hidden" name="amount" value="35.00">
+      <input type="hidden" name="item_name" value="Comfort Pads">
+      <input type="submit" value="Buy Now">
+    </form>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product">
+    <img src="images/cup.jpg" alt="Reusable Cup">
+    <h3>Reusable Cup – Eco-friendly</h3>
+    <p>R120 each</p>
+    <form action="https://www.payfast.co.za/eng/process" method="post">
+      <input type="hidden" name="merchant_id" value="10043425">
+      <input type="hidden" name="merchant_key" value="9eykrlvsvlhux">
+      <input type="hidden" name="amount" value="120.00">
+      <input type="hidden" name="item_name" value="Reusable Cup">
+      <input type="submit" value="Buy Now">
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 FlowCare | info@flowcare.co.za
+</footer>
+
+</body>
+  </html>
