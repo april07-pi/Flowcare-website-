@@ -35,3 +35,41 @@ button.add-to-cart:hover {
 button.add-to-cart:active {
   transform: scale(0.98);
 }
+input.buy-now {
+  background: linear-gradient(to right, #ff69b4, #ff1493);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+input.buy-now:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff1493, #ff69b4);
+}
+input.buy-now {
+  background: linear-gradient(to right, #ff69b4, #ff1493);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+input.buy-now:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff1493, #ff69b4);
+}
+
+input.buy-now:active {
+  transform: scale(0.98);
+}
