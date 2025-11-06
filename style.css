@@ -13,3 +13,15 @@ nav a {margin:0 10px;text-decoration:none;color:#333;font-weight:600;}
 #messages {height:200px;overflow-y:auto;background:#fff;padding:10px;border:1px solid #ccc;margin-bottom:10px;}
 #userInput {width:70%;padding:8px;}
 footer {text-align:center;padding:20px;background:#ffb6c1;margin-top:30px;}
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.03);
+            }
